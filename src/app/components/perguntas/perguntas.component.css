@@ -6,4 +6,40 @@
     align-content: center;
     justify-content: space-evenly;
     align-items: center;
+    margin-top: 80px;
+}
+
+.img__container{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.text__container{
+    display: flex;
+    border: 1px solid ;
+    width: 760px;
+    height: 320px;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-content: center;
+    box-shadow: 0px 0px 2px 0px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.btn__options{
+    display: flex;
+    justify-content: center;
+    border: 1px solid;
+    width: 500px;
+    height: 30px;
+    border-radius: 8px;
+    background-color: darkgreen;
+    box-shadow: 0px 0px 2px 0px;
+    text-shadow: 0px 2px 2px #01a150;
+    font-weight: 600;
 }
