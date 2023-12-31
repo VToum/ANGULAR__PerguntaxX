@@ -1,14 +1,30 @@
 <div class="pergunta__container">
     <div class="img__container">
-        <img src="" alt="">
-        <h1>Titulo aqui</h1>
+        <img src="https://th.bing.com/th/id/OIG.fbtcw4NhS3QSsNNG0YYm?w=1024&h=1024&rs=1&pid=ImgDetMain" alt="img_page">
+    </div>
+    <div class="titulo__container">
+        <h1>{{titulo}}</h1>
     </div>
 
-    <div class="text__container">
-        <p>Texto aqui</p>
+    <div *ngIf=!fim  class="text__container">
+        <p>{{questaoSelecionada.question}}</p>
     </div>
 
-    <div class="btn__options">
-        Enivar
+    <div *ngIf=!fim  class="opcao__container">
+        <div *ngFor="let options of questaoSelecionada.options; let i = index" class="btn__options" (click)="opcaoSelecionada(options.alias)">
+           {{options.name}}
+        </div>
     </div>
+
+    <div *ngIf=fim  class="opcao__container">
+        <div class="btn__options" (click)="jogarNovamente()">
+           Jogar Novamente
+        </div>
+    </div>
+
+    <div *ngIf=fim class="resultado__container">
+        <h3>O Seu resultado é:</h3>
+        <p>{{questaoSelecionada}}</p>
+    </div>
+
 </div>
